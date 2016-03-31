@@ -1,13 +1,89 @@
 <!doctype html>
-
+<!-- music history boilerplate, take 1...ACTION -->
 <html lang="en">
 <head>
+<!-- ha ha can't see me -->
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
+<!-- header bar - red - 3 links -->
+  <header class="top">
+    <a href="#">View Music</a>|
+    <a href="#">Add Music</a>|
+    <a href="#">Profile</a>
+  </header>
 
+  <div class="left">
+    <!-- blue box, floated left, 1 slider, 2 drops, checkboxes -->
+    <label for="Song Length">Song Length:</label><br><br><input type="range"><br><br>
+
+    <label for="Artist">Artist:</label><br>
+      <select name="Artist"><br>
+      <!-- *cough* hipster -->
+        <optgroup>
+          <option>The Replacements</option>
+          <option>The Cure</option>
+          <option>Social Distortion</option>
+          <option>Velvet Underground</option>
+          <option>The Clash</option>
+        </optgroup>
+      </select><br><br><br>
+
+    <label for="Album">Album:</label><br>
+      <select name="Album">
+      <!-- *cough* hipster -->
+        <optgroup>
+          <option>Pleased To Meet Me</option>
+          <option>Seventeen Seconds</option>
+          <option>Mommy's Little Monster</option>
+          <option>Nico</option>
+          <option>London Calling</option>
+        </optgroup>
+      </select>
+      <br><br><br>
+   
+    <!-- these should be aligned some way  -->
+    <div>
+        <label for="Genres">Genres:</label>
+        <div class="genres-one">
+          <ul>
+            <li><input type="checkbox" id="Rock" value="Rock"><label for="Rock">Rock</label></li>
+            <li><input type="checkbox" id="Pop" value="Pop"><label for="Pop">Pop</label></li>
+            <li><input type="checkbox" id="Jazz" value="Jazz"><label for="Jazz">Jazz</label></li>
+          </ul>
+        </div>
+
+        <div class="genres-two">
+          <ul>
+            <li><input type="checkbox" id="Blues" value="Blues"><label for="Blues">Blues</label></li>
+            <li><input type="checkbox" id="Hip hop" value="Hip hop"><label for="Hip hop">Hip hop</label></li>
+            <li><input type="checkbox" id="Classical" value="Classical"><label for="Classical">Classical</label></li>
+        </ul>
+      </div> 
+     </div> 
+     <br><br>
+        <!-- fieldset test -->
+        <button name="fakebutton">Filter</button>
+</div>
+
+  <div class="right">
+  <!-- yellow box, also floated left-because cascading -->
+  <section>
+    <h1 class="songname">Song Name</h1>
+    <p>Artist | Album Name | Genre</p>
+    <h1 class="songname">Song Name</h1>
+    <p>Artist | Album Name | Genre</p>
+    <h1 class="songname">Song Name</h1>
+    <p>Artist | Album Name | Genre</p>
+    <h1 class="songname">Song Name</h1>
+    <p>Artist | Album Name | Genre</p>
+  </section>
+
+</div>
 
 </body>
+<!-- pls don't judge -->
 </html>

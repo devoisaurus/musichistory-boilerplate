@@ -1,0 +1,72 @@
+body {
+  background-color: white;
+} 
+/*generic background*/
+
+/*top bar, solid red border, text seperated by pipes*/
+header.top {
+  background-color: #FFB4B0;
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 97.99%;
+  height: 30px;
+  clear: both;
+}
+/*top bar, red solid border*/
+
+/*left section, blue, all the selector things*/
+div.left {
+ background-color: #4DD7FA;
+  border: 2px solid black;
+  padding: .5em;
+  float: left;
+  text-align: left;
+  width: 15%;
+  height: 90%;
+  margin-right: 5px;
+}
+/*left section, blue, has form selectors*/
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+div.genres-one {
+  float: left;
+  width: 48%
+}
+
+div.genres-two {
+  float: left;
+  width: 48%
+}
+
+.genres-two ul {
+  margin-top: 0;
+}
+
+
+/*hopefully this splits the genres into columns*/
+
+/*yellow yellow*/
+div.right {
+  background-color: #FEFAC0;
+  float: left;
+  border: 2px solid black;
+  margin: 1px 0 0 2px;
+  padding: .5em;
+  width: 81%;
+  height: 90%;
+}
+/*right box, yellow, has basic text*/
+
+
+h1.songname {
+  color: #785616;
+}
+/*text color formatting for Song Name in right div*/
