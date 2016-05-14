@@ -1,82 +1,108 @@
-<!doctype html>
-<!-- music history boilerplate, take 1...ACTION -->
+<!DOCTYPE html>
+<html>
 <html lang="en">
 <head>
-<!-- ha ha can't see me -->
   <meta charset="utf-8">
-  <title>Music History</title>
+  <title>Music History | Version 3</title>
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
-<!-- header bar - red - 3 links -->
-  <header class="top">
-    <a href="#">View Music</a>|
-    <a href="#">Add Music</a>|
-    <a href="#">Profile</a>
-  </header>
 
-  <div class="left">
-    <!-- blue box, floated left, 1 slider, 2 drops, checkboxes -->
-    <label for="Song Length">Song Length:</label><br><br><input type="range"><br><br>
+<!-- Pink Nav bar -->
 
-    <label for="Artist">Artist:</label><br>
-      <select name="Artist"><br>
-      <!-- *cough* hipster -->
-        <optgroup>
-          <option>The Replacements</option>
-          <option>The Cure</option>
-          <option>Social Distortion</option>
-          <option>Velvet Underground</option>
-          <option>The Clash</option>
-        </optgroup>
-      </select><br><br><br>
+  <div class="top_nav">
+    <a class="btn link" id="list_music_view" href="#"
+          <span class="btn__text">List Music</span>
+    </a>
+    <a class="btn link" id="add_music_view" href="#"
+      <span class="btn__text">Add Music </span>
+    </a>
+    <a class="btn link" id="profile_view" href="#"
+      <span class="btn__text">Profile </span>
+    </a>
+  </div>
 
-    <label for="Album">Album:</label><br>
-      <select name="Album">
-      <!-- *cough* hipster -->
-        <optgroup>
-          <option>Pleased To Meet Me</option>
-          <option>Seventeen Seconds</option>
-          <option>Mommy's Little Monster</option>
-          <option>Nico</option>
-          <option>London Calling</option>
-        </optgroup>
-      </select>
-      <br><br><br>
+<!-- Left Blue Bar -->
+  <div id="container">
+    <div id='left_bar'>
 
-    <!-- these should be aligned some way  -->
-    <div>
-        <label for="Genres">Genres:</label>
-        <div class="genres-one">
-          <ul>
-            <li><input type="checkbox" id="Rock" value="Rock"><label for="Rock">Rock</label></li>
-            <li><input type="checkbox" id="Pop" value="Pop"><label for="Pop">Pop</label></li>
-            <li><input type="checkbox" id="Jazz" value="Jazz"><label for="Jazz">Jazz</label></li>
-          </ul>
-        </div>
+  <!-- Song Length Slider -->
+    <form class="slider">
+    <label for="slider">Song length:</label>
+    <input type="range">
+    </form>
 
-        <div class="genres-two">
-          <ul>
-            <li><input type="checkbox" id="Blues" value="Blues"><label for="Blues">Blues</label></li>
-            <li><input type="checkbox" id="Hip hop" value="Hip hop"><label for="Hip hop">Hip hop</label></li>
-            <li><input type="checkbox" id="Classical" value="Classical"><label for="Classical">Classical</label></li>
-        </ul>
+  <!-- Artist Select Box -->
+    <form class="artist">
+    <label for="artist">Artist:</label>
+    <select name="artist">
+      <option value="replacements">The Replacements</option>
+      <option value="cure">The Cure</option>
+      <option value="social">Social Distortion</option>
+      <option value="velvet">Velvet Underground</option>
+      <option value="clash">The Clash</option>
+    </select>
+    </form>
+
+    <!-- Album Select Box -->
+    <form class="album">
+    <label for="album">Album:</label>
+    <select name="album">
+      <option for="meet_me">Pleased To Meet Me</option>
+      <option for="seventeen">Seventeen Seconds</option>
+      <option for="monster">Mommy's Little Monster</option>
+      <option for="nico">Nico</option>
+      <option for="london">London Calling</option>
+    </select>
+    </form>
+
+    <!-- Genre Checkboxes -->
+    <form>
+    <label for="genre">Genre:</label>
+      <div class="checkbox-container">
+      <ul>
+      <section class="checkbox-left">
+      <li><input type="checkbox" name="genre" value="rock">Rock</li>
+      <li><input type="checkbox" name="genre" value="pop">Pop</li>
+      <li><input type="checkbox" name="genre" value="blues">Blues</li>
+      </section>
+      </ul>
+      <ul>
+      <section class="checkbox-right">
+      <li><input type="checkbox" name="genre" value="classical">Classical</li>
+      <li><input type="checkbox" name="genre" value="jazz">Jazz</li>
+      <li><input type="checkbox" name="genre" value="hip_hop">Hip Hop</li>
+      </section>
+      </ul>
       </div>
-     </div>
-    <br><br>
-        <!-- fieldset test -->
-        <button name="fakebutton">Filter</button>
-</div>
+    </form>
 
-  <div class="right">
-  <!-- yellow box, also floated left-because cascading -->
-    <section>
-      <div id="music"></div>
-    </section>
+  <!-- Filter Button -->
+    <button class="filter">Filter</button>
+  </div>
 
-</div>
-<script src="js-101.js"></script>
+<!-- Right Yellow Box -->
+  <div id="yellow_block">
+
+  </div>
+
+  <!-- Add Music View -->
+  <div id="purple_block">
+    <fieldset>
+      <legend>Add a Song:</legend>
+      <label for="title">Title:</label>
+      <input type="text" id="title" size="40" maxlength="100">
+      <label for="artist">Artist:</label>
+      <input type="text" id="artist" size="40" maxlength="100">
+      <label for="album">Album:</label>
+      <input type="text" id="album" size="40" maxlength="100">
+      <button id="add_btn">Add</button>
+    </fieldset>
+
+  </div>
+  </div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="songs.js"></script>
 </body>
-<!-- pls don't judge -->
 </html>

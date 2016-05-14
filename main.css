@@ -1,72 +1,133 @@
+
+/*General*/
+
 body {
-  background-color: white;
-} 
-/*generic background*/
-
-/*top bar, solid red border, text seperated by pipes*/
-header.top {
-  background-color: #FFB4B0;
-  border: 2px solid black;
-  margin-bottom: 10px;
-  padding: 10px;
-  width: 97.99%;
-  height: 30px;
-  clear: both;
+  font-family: 'Arial';
+  width: 85%;
+  margin: 0 auto;
 }
-/*top bar, red solid border*/
 
-/*left section, blue, all the selector things*/
-div.left {
- background-color: #4DD7FA;
+/*Pink Nav Bar*/
+
+.top_nav {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #ffb4b0;
   border: 2px solid black;
-  padding: .5em;
-  float: left;
-  text-align: left;
-  width: 15%;
-  height: 90%;
-  margin-right: 5px;
+  padding: 1em;
+  margin: 1em 0;
 }
-/*left section, blue, has form selectors*/
+
+.link {
+  margin: 0 .25em;
+}
+
+/*Container for Blue and Yellow*/
+
+#container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/*Blue Nav Bar*/
+
+#left_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: #4dd7fa;
+  border: 2px solid black;
+  padding: 1em;
+  margin-right: 1em;
+  width: 20%;
+}
+
+/*Blue Bar Elements*/
 
 ul {
-  padding: 0;
+  list-style-type: none;
+}
+
+select {
+  font-family: 'Arial';
+  font-size: .9em;
 }
 
 li {
-  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-div.genres-one {
-  float: left;
-  width: 48%
+.checkbox-container {
+  display: flex;
+  flex-flow: row nowrap;
 }
 
-div.genres-two {
-  float: left;
-  width: 48%
+.checkbox-left {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-.genres-two ul {
-  margin-top: 0;
+.checkbox-right {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
-
-/*hopefully this splits the genres into columns*/
-
-/*yellow yellow*/
-div.right {
-  background-color: #FEFAC0;
-  float: left;
+.filter {
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  padding: .2em 0;
+  font-size: 1em;
+  background-color: white;
+  border-radius: 6px;
   border: 2px solid black;
-  margin: 1px 0 0 2px;
-  padding: .5em;
-  width: 81%;
-  height: 90%;
 }
-/*right box, yellow, has basic text*/
 
+/*Yellow Box*/
 
-h1.songname {
+#yellow_block {
+  background-color: #fefac0;
+  border: 2px solid black;
+  padding: 0 1em 1.2em 1.5em;
+  width: 80%;
+}
+
+/*Yellow Box Elements*/
+
+#yellow_block h2 {
   color: #785616;
+  font-weight: normal;
 }
-/*text color formatting for Song Name in right div*/
+#yellow_block p {
+  color: black;
+  font-size: .9em;
+  line-height: .4em;
+}
+
+/*Purple Box*/
+
+#purple_block {
+  display: none;
+  display: flex;
+  width: 100%;
+  background-color: #FF9BFF;
+  border: 2px solid #3D263E;
+  justify-content: center;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+#purple_block fieldset{
+  display: flex;
+  flex-direction: column;
+  line-height: 2em;
+}
+
+#add_button {
+  padding: .3em .5em;
+  margin: 1em auto;
+  font-size: 1.2em;
+}
+
