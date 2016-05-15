@@ -1,75 +1,46 @@
-'use strict';
+"use strict"
 
-////// Music History 2 /////////////////////////////////////////////////////////////////////////////
-// Provided array for Music History 2
-var songs = [];
-
-songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-
-songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
-
-// Add one song to the beginning and one to the end of the array
-songs.push("Rollerskate Skinny > by Old 97's on the album Satellite Rides");
-	songs.unshift("Don't Let Us Get Sick > by Warren Zevon on the album Life'll Kill Ya");
-
-// Calls the function to loop through the array replacing characters
-charReplacer(songs, '>', '-');
-charReplacer(songs, '*', '');
-charReplacer(songs, '@', '');
-charReplacer(songs, '(', '');
-charReplacer(songs, '!', '');
-
-// Loops an array replacing one char w/ another
-function charReplacer(array, oldChar, newChar) {
-  for (let i = 0; i < array.length; i++) {
-    array[i] = array[i].replace(oldChar, newChar);
-  };
-};
-
-// Creates a string for the array
-var buildString = '';
-function makeAString (array) {
-  for (let i = 0; i < array.length; i++) {
-    buildString += `<h2>${array[i]}</h2>`;
-  };
-    return buildString
-};
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-$(document).ready(function() {
-
-  // hides the Add Music View on load
-  $('#purple_block').hide();
-
-  // Populates the yellow block with the array of songs
-  $('#yellow_block').html(makeAString(songs));
-
-  // When Add Music button is clicked, that block is shown, others are hidden
-  $('#add_music_view').click(function(e) {
-    $('#purple_block').show();
-    $('#left_bar').hide();
-    $('#yellow_block').hide();
-  });
-
-  // When List Music button is clicked, those blocks are shown, other is hidden
-  $('#list_music_view').click(function(e) {
-    $('#purple_block').hide();
-    $('#left_bar').show();
-    $('#yellow_block').show();
-  });
-
-  // Gets info from Add Music Form and puts that into the array
-  $('#add_btn').click(function(e) {
-    let addTitle = $('#title').val();
-    let addArtist = $('#artist').val();
-    let addAlbum = $('#album').val();
-    songs.push(`${addTitle} - by ${addArtist} on the album ${addAlbum}`);
-    $('#yellow_block').append(`<h2>${addTitle} - by ${addArtist} on the album ${addAlbum}</h2>`)
-  });
-
-
-
+$.ajax({
+    url: "music.json"
+}).done(function(data) {
+    buildMusicOne(data);
 });
+
+function buildMusicOne(firstSet){
+    for (let i = 0; i < firstSet.songs.length; i++) {
+        let currentSong = firstSet.songs[i];
+        $("#musicOne").append("<div class='newSong'><h4><input type='button'class='deleteButton' value='Remove'> " + "<span class='info'>" + currentSong.name + "</span>" + " <span class='info'>by the artist " + currentSong.artist + "</span>" + " <span class='info'>on the album " + currentSong.album + "</span></h4></div>");
+    };
+    addDeleteButtons();
+};
+
+$.ajax({
+    url: "moremusic.json"
+}).done(function(data) {
+    buildMusicTwo(data);
+});
+
+function buildMusicTwo(songs) {
+    let more = $("#moreButton");
+    more.click(function() {
+        loadTwo(songs);
+        $("#musicOne").hide();
+        $("#musicTwo").show();
+        $("moreButton").hide();
+    });
+};
+
+function loadTwo(secondSet){
+    for (let i = 0; i < secondSet.songsTwo.length; i++) {
+        let currentSong = secondSet.songsTwo[i];
+        $("#musicTwo").append("<div class='newSong'><h4><input type='button'class='deleteButton' value='Remove'> " + "<span class='info'>" + currentSong.name + "</span>" + " <span class='info'>by the artist " + currentSong.artist + "</span>" + " <span class='info'>on the album " + currentSong.album + "</span></h4></div>");
+    };
+    addDeleteButtons();
+};
+
+function addDeleteButtons() {
+    $(".deleteButton").click(function() {
+        $(this.parentNode.remove(this));
+    });
+};
+

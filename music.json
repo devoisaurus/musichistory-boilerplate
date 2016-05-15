@@ -1,0 +1,22 @@
+{
+  "songs": [{
+      "name": "Rollerskate Skinny",
+      "artist": "Old 97's",
+      "album": "Satellite Rides"
+      },
+      {
+      "name":  "Legs",
+      "artist": "ZZ Top",
+      "album": "Eliminator"
+      },
+      {
+      "name": "The Logical Song",
+      "artist": "Supertramp",
+      "album": "Breakfast in America"
+      },
+      {
+      "name": "Another Brick in the Wall",
+      "artist": "Pink Floyd",
+      "album": "The Wall"
+    }]
+  }
