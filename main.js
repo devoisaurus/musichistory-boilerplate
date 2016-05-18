@@ -1,41 +1,5 @@
 'use strict';
 
-// var songs = [];
-
-// songs[songs.length] = "Legs > by Z*ZTop on the album Eliminator";
-// songs[songs.length] = "The Logical Song > by Supertr@amp on the album Breakfast in America";
-// songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-// songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-
-// songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
-
-// // Add one song to the beginning and one to the end of the array
-// songs.push("Rollerskate Skinny > by Old 97's on the album Satellite Rides");
-// 	songs.unshift("Don't Let Us Get Sick > by Warren Zevon on the album Life'll Kill Ya");
-
-// // Calls the function to loop through the array replacing characters
-// charReplacer(songs, '>', '-');
-// charReplacer(songs, '*', '');
-// charReplacer(songs, '@', '');
-// charReplacer(songs, '(', '');
-// charReplacer(songs, '!', '');
-
-// // Loops an array replacing one char w/ another
-// function charReplacer(array, oldChar, newChar) {
-//   for (let i = 0; i < array.length; i++) {
-//     array[i] = array[i].replace(oldChar, newChar);
-//   };
-// };
-
-// // Creates a string for the array
-// var buildString = '';
-// function makeAString (array) {
-//   for (let i = 0; i < array.length; i++) {
-//     buildString += `<h2>${array[i]}</h2>`;
-//   };
-//     return buildString
-// };
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 $(document).ready(function() {
 
@@ -60,13 +24,14 @@ $(document).ready(function() {
   });
 
   // Gets info from Add Music Form and puts that into the array
-  $('#add_btn').click(function(e) {
-    let addTitle = $('#title').val();
-    let addArtist = $('#artist').val();
-    let addAlbum = $('#album').val();
-    songs.push(`${addTitle} - by ${addArtist} on the album ${addAlbum}`);
-    $('#yellow_block').append(`<h2>${addTitle} - by ${addArtist} on the album ${addAlbum}</h2>`)
-  });
+  // $('#add_btn').click(function(e) {
+  // 	let newSong = {};
+  //   newSong.name = $('#title').val();
+  //   newSong.artist = $('#artist').val();
+  //   newSong.album = $('#album').val();
+
+
+  // });
 
 
 

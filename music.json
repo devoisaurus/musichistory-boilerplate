@@ -1,22 +1,39 @@
 {
-  "songs": [{
+  "songs": {
+    "skate": {
       "name": "Rollerskate Skinny",
       "artist": "Old 97's",
       "album": "Satellite Rides"
       },
-      {
+      "legs":{
       "name":  "Legs",
       "artist": "ZZ Top",
       "album": "Eliminator"
       },
-      {
+      "logic":{
       "name": "The Logical Song",
       "artist": "Supertramp",
       "album": "Breakfast in America"
       },
-      {
+      "brick":{
       "name": "Another Brick in the Wall",
       "artist": "Pink Floyd",
       "album": "The Wall"
-    }]
+    },
+    "jungle":{
+      "name": "Welcome to the Jungle",
+      "artist": "Guns & Roses",
+      "album": "Appetite for Destruction"
+    },
+    "ironic": {
+      "name": "Ironic",
+      "artist": "Alanis Morisette",
+      "album": "Jagged Little Pill"
+    },
+    "sick": {
+      "name": "Don't Let Us Get Sick",
+      "artist": "Warren Zevon",
+      "album": "Life'll Kill Ya"
+     }
+    }
   }
